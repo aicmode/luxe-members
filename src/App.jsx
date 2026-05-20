@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import silkImage from './assets/atelier-silk-capsule.png'
+import goldHardwareImage from './assets/gold-hardware-edit.png'
 import atelierImage from './assets/luxe-atelier.png'
 import './App.css'
 
@@ -7,16 +9,22 @@ const collection = [
     title: 'Noir Evening Tailoring',
     type: 'Private Preview',
     detail: 'Hand-finished wool barathea with satin peak lapels.',
+    image: atelierImage,
+    imageAlt: 'Black couture tailoring displayed in a private luxury atelier',
   },
   {
     title: 'Atelier Silk Capsule',
     type: 'Members Reserve',
     detail: 'Ivory silk separates cut for intimate salon appointments.',
+    image: silkImage,
+    imageAlt: 'Ivory silk garments displayed on black marble in a luxury atelier',
   },
   {
     title: 'Gold Hardware Edit',
     type: 'Limited Access',
     detail: 'Sculptural accessories produced in numbered quantities.',
+    image: goldHardwareImage,
+    imageAlt: 'Gold luxury accessories and hardware arranged on black marble',
   },
 ]
 
@@ -100,8 +108,8 @@ function App() {
         <div className="collection-grid">
           {collection.map((piece, index) => (
             <article className="collection-card" key={piece.title}>
-              <div className={`collection-image image-${index + 1}`} aria-hidden="true">
-                <img src={atelierImage} alt="" />
+              <div className={`collection-image image-${index + 1}`}>
+                <img src={piece.image} alt={piece.imageAlt} />
               </div>
               <div className="collection-copy">
                 <span>{piece.type}</span>
