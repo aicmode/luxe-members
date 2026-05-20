@@ -103,12 +103,28 @@
   font-size: clamp(4rem, 12vw, 10rem);
 }
 
+.jp-subtitle {
+  margin: 1rem 0 0;
+  color: #f2ddb0;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+}
+
 .login-copy {
   width: min(100%, 36rem);
   margin: 1.5rem 0 2rem;
   color: rgba(255, 255, 255, 0.76);
   font-size: clamp(1rem, 2vw, 1.2rem);
   line-height: 1.7;
+}
+
+.login-copy span {
+  display: block;
+  margin-top: 0.85rem;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
 }
 
 .login-card,
@@ -128,12 +144,21 @@
 
 label {
   display: grid;
-  gap: 0.5rem;
+  gap: 0.35rem;
   color: rgba(255, 255, 255, 0.64);
   font-size: 0.72rem;
   letter-spacing: 0.16em;
   text-align: left;
   text-transform: uppercase;
+}
+
+label small {
+  color: rgba(255, 255, 255, 0.46);
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  text-transform: none;
 }
 
 input,
@@ -274,6 +299,14 @@ textarea:focus {
   margin-bottom: 2rem;
 }
 
+.jp-support {
+  margin: 1rem 0 0;
+  color: rgba(216, 189, 116, 0.86);
+  font-size: clamp(0.95rem, 1.7vw, 1.08rem);
+  letter-spacing: 0.06em;
+  line-height: 1.7;
+}
+
 .collection-grid {
   background: rgba(216, 189, 116, 0.25);
   border-color: rgba(216, 189, 116, 0.25);
@@ -346,6 +379,10 @@ textarea:focus {
 .reservation-copy p:not(.eyebrow) {
   width: min(100%, 32rem);
   margin-top: 1.2rem;
+}
+
+.reservation-copy .jp-support {
+  color: #8c6b22;
 }
 
 .reservation-form {
